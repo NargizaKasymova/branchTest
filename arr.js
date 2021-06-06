@@ -49,3 +49,15 @@ countAverageSalary = (arr) => {
 }
 console.log('Average salary in it-dep is ', countAverageSalary(it_department_employees))
 
+// Задача 3
+
+// Из выше стоящего задания. Отфильтровать сотрудников и оставить только тех, у кого ЗП больше 1500 ,
+// из осташвихся сотрудников каждого повысить на 500, результат записать в новый массив.
+filterHighSalary = (arr) => {
+    let filteredArray = arr.filter(item => item.salary > 1500)
+    for(let item of filteredArray) {
+        item.salary += 500
+    }
+        return filteredArray
+}
+console.log('List of increased salaries: ', filterHighSalary(it_department_employees))
